@@ -7,5 +7,36 @@
     <h1>welcome to roboskill</h1>
     <h3>established july 19, 2016</h3>
     <p>all your base are belong to us<span class="blinking-cursor">_</span></p>
+
+    <div id="blog">
+        <h2>learning new skills</h2>
+
+        <div class="date">july 19, 2016</div>
+
+        <p>
+            I went to an Amazon Developer Education event today in Seattle to learn how to make Alexa Skills. I am going to write some thoughts about it here since it is still a new topic and the information may be useful to others. I'm not going to "install" anything to get this blog up and running. Going to keep it lean and mean and just start writing some plain ol' HTML in an index.html file. Hosting it on Github with some simple styles. This will be very stream of consciousness as I'm learning how to do this as we speak. Bust it.
+        </p>
+
+        <p>
+            Anyway, today I learned some of the basics of creating new skills for my Echo, which I purchased a few months ago. I am in love with using it to control Spotify since I'm a bit of a music nerd. I originally justified buying the Echo because I knew it was programmable and I thought it would be exciting to teach it new skills and perhaps use it to interact with Web API's.
+
+        </p>
+
+        <h3>Concepts</h3>
+
+        <p>
+         The process of creating a new skill consists of designing a Voice UI for the Echo. Or should I call it an "Alexa Device"? The device has other form factors now (the Tap and the Dot) and I bet voice UI's will be in all sorts of other form factors and devices in the near future.
+         </p>
+
+        <p>The Voice UI that you design essentially maps the different "utterances" of your voice to a function that is executed. The code for that function typically lives on Amazon Lambda, although that is not a strict requirement. To make an analogy to web development, you are essentially writing the code for the Echo to process a voice "request" and return a voice "response". The voice "utterance" is what the person says aloud. This utterance is mapped to an "intent". When you speak to the Echo, you intend for something to happen, you have some goal in mind. For example you might utter "Play I Can't Feel My Face on Spotify" and expect to hear the song played for you on the Echo speaker. You may utter "What's the weather like in Seattle" to communicate that you want to hear today's weather forecast in Seattle. 
+        </p>
+
+        <p>Your intention is mapped to some code that is written in the form of an Amazon Lambda function. The variables in each utterance can be mapped to "slots". So a CheckWeatherIntent might have slots for {todaysDate} and a {location}. Those slots can have custom types or can use one of the common pre-defined types like numbers or dates. This is similar to how most programming languages have some built-in types like integers and Date objects. These slots are similar to inputs to a function because they are. The function's "return value" is what the Echo says back. Underneath the hood, it's all a bunch of JavaScript and JSON really, and the Echo knows how to read the JSON response aloud.
+        </p>
+
+        <p>
+        The code for a Lambda function can currently be written in Java, Python, or JavaScript. I assume more languages will be added soon, but these seem like practical choices to get started with. In today's workshop, we wrote code in JavaScript that ran in the node executtion environment. We also learned to set up a local development environment for testing locally. The instructor also motivated us to go home and write a few basic skills based on some <a href="https://github.com/amzn/alexa-skills-kit-js">examples in the Amazon Github repository</a>. If we create 3 of them, they will send us an Echo. I went ahead and created a Rap Trivia skill for my first submission to go through the process of getting a skill up and running. It is currently awaiting "Certification". I'll post an update tomorrow, assuming it is accepted by then.
+        </p>
+    </div>
 </body>
 </html>
